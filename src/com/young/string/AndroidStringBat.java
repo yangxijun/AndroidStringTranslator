@@ -243,7 +243,7 @@ public class AndroidStringBat implements ActionListener {
 			}
 
 			// ja也加进来
-			if (lan.equals("jp")) {
+			if (lan.equals("jp") || lan.equals("ja")) {
 				String savePath = saveTranslatedStringPath + "/values-ja/strings.xml";
 				mLanguage.set(0, savePath);
 			}
@@ -271,7 +271,7 @@ public class AndroidStringBat implements ActionListener {
 				String savePath = saveTranslatedStringPath + "/values-tr/strings.xml";
 				mLanguage.set(0, savePath);
 			}
-			if (lan.equals("zh_hk")) {
+			if (lan.equals("zh_hk") || lan.equals("zhhk")) {
 				String savePath = saveTranslatedStringPath + "/values-zh/strings.xml";
 				mLanguage.set(0, savePath);
 			}
