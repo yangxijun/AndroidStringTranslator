@@ -117,6 +117,7 @@ public class AndroidStringBat implements ActionListener {
 		int i = 1;
 		String thisLine;
 		int size = list.size() - 1;
+
 		while ((thisLine = in.readLine()) != null) {
 			// 如果行号再范围内，则输出要插入的数据
 			if (i >= lineStart && i < lineStart + size) {
@@ -208,7 +209,11 @@ public class AndroidStringBat implements ActionListener {
 			ArrayList<String> mLanguage = new ArrayList<String>();
 			for (int j = 0; j < mSheet.getRows(); j++) {
 				Cell cell = mSheet.getCell(i, j);
-				mLanguage.add(cell.getContents());
+				String str = cell.getContents();
+				// 加入判空逻辑
+				if (str != null && !str.isEmpty()) {
+					mLanguage.add(cell.getContents());
+				}
 			}
 
 			String lan = mLanguage.get(0).toString();
